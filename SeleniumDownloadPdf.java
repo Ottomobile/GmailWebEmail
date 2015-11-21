@@ -11,7 +11,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class SeleniumDownloadPdf {
 
     public static void main(String[] args) {
-        // String webpageUrl = "https://en.wikipedia.org/wiki/Canada";
         if(args.length != 1){
             System.out.println("Incorrect number of arguments");
             System.out.println("SeleniumDownloadPdf {webpageUrl}");
@@ -28,7 +27,6 @@ public class SeleniumDownloadPdf {
         
         try{
             // Setup
-            // driver = new FirefoxDriver();
             System.setProperty("webdriver.chrome.driver", "/Users/OL/Documents/GmailWebSeleniumPDF/chromedriver");
             driver = new ChromeDriver();
             
