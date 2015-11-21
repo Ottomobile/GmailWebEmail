@@ -11,7 +11,7 @@ public class HttrackWebpageRetriever {
 	 * @param webpageURL 		URL of the webpage to retrieve
 	 * @param fileDirParent 	Parent directory of the directory that will store the retrieved webpage
 	 * @param fileDirWebpage	Directory that will store the retrieved webpage
-	 * @param options 			Additional options (filters, recursion level, etc.)
+	 * @param options 		Additional options (filters, recursion level, etc.)
 	 * @throws IOException
 	 */
 	public static void retrieveWebpageHttrack(String webpageURL, String fileDirParent, String fileDirWebpage, String options)
@@ -33,7 +33,7 @@ public class HttrackWebpageRetriever {
 	 * 
 	 * @param fileDirParent		Parent directory containing the directory you want to zip
 	 * @param fileDirWebpage 	Directory to zip
-	 * @param zipName			Name of the zipped directory
+	 * @param zipName		Name of the zipped directory
 	 * @throws IOException
 	 */
 	public static void zipFolder(String fileDirParent, String fileDirWebpage, String zipName)
