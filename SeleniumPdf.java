@@ -25,11 +25,11 @@ public class SeleniumPdf {
 		Runtime rt = Runtime.getRuntime();
 		File workingDirectory = new File("/Users/OL/Documents/GmailWebSeleniumPDF").getAbsoluteFile();
 		String[] commandLineArgs = {"java",
-									"-cp",
-									".:selenium-java-2.48.2-srcs.jar:selenium-java-2.48.2.jar:selenium-server-standalone-2.48.2.jar:junit-4.12.jar",
-									"SeleniumDownloadPdf",
-									webpageUrl
-									};
+					    "-cp",
+			         	    ".:selenium-java-2.48.2-srcs.jar:selenium-java-2.48.2.jar:selenium-server-standalone-2.48.2.jar:junit-4.12.jar",
+					    "SeleniumDownloadPdf",
+					    webpageUrl
+					   };
 		Process process = rt.exec(commandLineArgs, null, workingDirectory);
 		System.out.println("Waiting for webpage to pdf conversion");
 		process.waitFor();
@@ -60,7 +60,7 @@ public class SeleniumPdf {
 	 * Get a list of all the files in the directory with a specific filetype
 	 * 
 	 * @param directory 	Directory where the files are contained
-	 * @param filetype 		Extension of the files to retrieve ({.pdf}, {.doc}, etc.)
+	 * @param filetype 	Extension of the files to retrieve ({.pdf}, {.doc}, etc.)
 	 * @return List of files of the specified filetype
 	 */
 	public static ArrayList<File> getSpecificFileType(String directory, String filetype){
