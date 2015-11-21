@@ -193,13 +193,13 @@ public class GmailWebEmail {
 	        	    		Runtime rt = Runtime.getRuntime();
 	        	    		File workingDirectory = new File("/Users/OL/Documents/GmailWebSeleniumGoogle").getAbsoluteFile();
 	        	    		String[] commandLineArgs = {"java",
-	        	    									"-cp",
-	        	    									".:selenium-java-2.48.2-srcs.jar:selenium-java-2.48.2.jar:selenium-server-standalone-2.48.2.jar:junit-4.12.jar",
-	        	    									"GmailWebSelenium",
-	        	    									searchQuery, 
-	        	    									PARENT_DIR, 
-	        	    									projectFilename
-	        	    									};
+	    							    "-cp",
+	    					 		    ".:selenium-java-2.48.2-srcs.jar:selenium-java-2.48.2.jar:selenium-server-standalone-2.48.2.jar:junit-4.12.jar",
+	    							    "GmailWebSelenium",
+	    						   	    searchQuery, 
+	    							    PARENT_DIR, 
+	    							    projectFilename
+	    							   };
 	        	    		Process process = rt.exec(commandLineArgs, null, workingDirectory);
 	        	    		
 	        	    		// Print the output of this process
