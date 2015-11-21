@@ -68,11 +68,11 @@ public class GmailWebEmail {
     
     // Global instance of the scopes for labels
     private static final List<String> SCOPES = Arrays.asList(GmailScopes.GMAIL_LABELS,
-    														GmailScopes.GMAIL_READONLY,
-    														GmailScopes.GMAIL_MODIFY,
-    														GmailScopes.MAIL_GOOGLE_COM,
-    														GmailScopes.GMAIL_INSERT,
-    														GmailScopes.GMAIL_COMPOSE);
+    							     GmailScopes.GMAIL_READONLY,
+    							     GmailScopes.GMAIL_MODIFY,
+    							     GmailScopes.MAIL_GOOGLE_COM,
+    							     GmailScopes.GMAIL_INSERT,
+    							     GmailScopes.GMAIL_COMPOSE);
     
     static {
         try {
@@ -290,26 +290,26 @@ public class GmailWebEmail {
 	        	    }
 	                catch (Exception e) {
 	                	System.out.println("An exception occurred: " + e.getMessage());
-						try {
-							// Create the email notifying that exception occurred and then send it
-							MimeMessage messageToBeSent = createMimeMessage(recipientEmail, SENDER_EMAIL, "EXCEPTION: "+emailSubject, emailBody, null, null);
-							sendMessage(service, "me", messageToBeSent);
-						} 
-						catch (MessagingException e1) {
-							e1.printStackTrace();
-						}
+				try {
+					// Create the email notifying that exception occurred and then send it
+					MimeMessage messageToBeSent = createMimeMessage(recipientEmail, SENDER_EMAIL, "EXCEPTION: "+emailSubject, emailBody, null, null);
+					sendMessage(service, "me", messageToBeSent);
+				} 
+				catch (MessagingException e1) {
+					e1.printStackTrace();
+				}
 	                }
-	        	    finally {
+	    		finally {
 		                // Mark retrieved unread email as read and move message under Label_4 ("Work")
 		                List<String> labelsToAdd = Arrays.asList("Label_4");
 		                List<String> labelsToRemove = Arrays.asList("UNREAD","INBOX","IMPORTANT");
 		                modifyMessage(service, "me", unreadMessages.get(0).getId(), labelsToAdd, labelsToRemove );
 		                System.out.println("Marked received message as read and moved it under the label 'Work'");
-	        	    }
+        	    	}
 	            }
 	        }
 	        else {
-	        	System.out.printf("No unread messages from %s\n", CLIENT_EMAIL);
+        		System.out.printf("No unread messages from %s\n", CLIENT_EMAIL);
 	        }
 	        
 	        // Interval of time to wait before querying inbox
