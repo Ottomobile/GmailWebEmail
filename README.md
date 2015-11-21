@@ -14,9 +14,10 @@ Application supports the following methods of webpage retrieval
   - Message body contains the webpage address
   - Response email will contain the webpage attached as a plain HTML file
 
-2. Use Httrack to mirror a website
+2. Use HTTrack to mirror a website
   - Subject line should contain "2-[filename_of_zip]"
   - Message body contains the webpage address, recursion level or other HTTrack options
+      - For example: https://en.wikipedia.org/wiki/National_Hockey_League -r2
   - Response email will contain the mirrored webpage attached as a zip file.  Zip file organizes HTML files according to the webpage structure.
   - Setting recursion level enables the retrieval of webpages directed by the links in the main webpage
 
