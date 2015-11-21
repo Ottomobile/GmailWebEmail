@@ -11,7 +11,7 @@ public class HTMLRetriever {
 	 * 
 	 * @param webpageURL 	Webpage's url
 	 * @param directory 	Directory to store the retrieved webpage
-	 * @param filename 		File name of the webpage's HTML contents
+	 * @param filename 	File name of the webpage's HTML contents
 	 */
 	public static void RetrieveWebpage(String webpageURL, String directory, String filename) {
 		  try{
